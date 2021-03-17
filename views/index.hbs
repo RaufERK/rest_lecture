@@ -1,0 +1,29 @@
+<h1>Товары</h1>
+<ol id='list'>
+  {{#each items}}
+  <li>
+    <span>
+      {{this.name}}
+    </span>
+    <span>
+      price:
+      {{this.price}}
+    </span>
+    <span>
+      amount:
+      {{this.amount}}
+    </span>
+    <button data-delete="{{this.id}}">DELETE</button>
+    <button data-like="{{this.id}}">LIKE</button>
+  </li>
+  {{/each}}
+</ol>
+
+<form action="/" method="post">
+  <input type="text" name="name" placeholder="name">
+  <input type="number" name="price" placeholder="price">
+  <input type="number" name="amount" placeholder="amount">
+  <button>ADD</button>
+</form>
+
+<script src="/front.js"></script>
